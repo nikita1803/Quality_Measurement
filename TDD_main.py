@@ -204,7 +204,7 @@ class comparing_length:
                 return True
                 
         except Exception:
-            print("feet can't be equal inch ")
+            print("feet can not be equal to inch ")
             return False
                    
 if __name__ == '__main__':
