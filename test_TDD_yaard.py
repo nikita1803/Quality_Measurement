@@ -120,7 +120,7 @@ class TestFeet(unittest.TestCase):
         Return:
             none
         '''
-        data = TDD_main_yard.yaard_analyser.one_yard_equal_to_thirtysix_inch(1,36)
+        data = TDD_main_yard.yaard_analyser.thirtysix_inch_equal_to_one_yard(1,36)
         self.assertEqual(data,True)
 
     def test_thirtysix_inch_equal_to_one_yard_Sad(self):
@@ -132,7 +132,7 @@ class TestFeet(unittest.TestCase):
         Return:
             none
         '''
-        data = TDD_main_yard.yaard_analyser.one_yard_equal_to_thirtysix_inch(1,22)
+        data = TDD_main_yard.yaard_analyser.thirtysix_inch_equal_to_one_yard(1,22)
         with self.assertRaises(Exception):
             self.assertEqual(data,'False')
 
