@@ -273,5 +273,55 @@ class TestInch(unittest.TestCase):
         inch = TDD_main.comparing_length.one_feet_not_equal_to_one_inch(1,12)
         self.assertEqual(inch , True)
 
+    def test_feet_not_equal_inch_Sad(self):
+        '''
+        Description:
+            this function is use to check one feet not equal to one inch , if equal then raise the exception
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        inch = TDD_main.comparing_length.one_feet_not_equal_to_one_inch(1,1)
+        with self.assertRaises(Exception):
+            self.assertEqual(inch, 'False')
+
+    def test_feet_not_equal_inch_Happy(self):
+        '''
+        Description:
+            this function is use to check if one feet is not equal to one inch then pass the case
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        inch = TDD_main.comparing_length.one_feet_not_equal_to_one_inch(1,12)
+        self.assertEqual(inch , True)
+
+    def test_inch_not_equal_feet_Sad(self):
+        '''
+        Description:
+            this function is use to check if inch is equal to feet then raise the exception
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        inch = TDD_main.comparing_length.one_inch_is_not_equal_to_feet(1,1)
+        with self.assertRaises(Exception):
+            self.assertEqual(inch, 'False')
+
+    def test_inch_not_equal_feet_Happy(self):
+        '''
+        Description:
+            this function is use to check if inch not equal to feet then pass the test case 
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        inch = TDD_main.comparing_length.one_inch_is_not_equal_to_feet(1,12)
+        self.assertEqual(inch , True)
+
 if __name__ == '__main__':
     unittest.main()
