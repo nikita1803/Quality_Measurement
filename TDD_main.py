@@ -40,6 +40,26 @@ class feet_Analyser:
         except Exception:
             print("Data not matched")
 
+    def zerofeet(value):
+        '''
+        Description:
+            zerofeet is a function which is use to check 0 feet equal to 0 feet
+        Parameter:
+            value is a parameter
+        Return:
+            boolean value
+        '''
+        try:
+            if(value==0):
+                raise Exception
+            else:
+                inch = 12* value
+                print(inch)
+                return True
+        except Exception:
+            print("please enter a non zero value")
+            return False
+
     
     def equal(value):
         '''
