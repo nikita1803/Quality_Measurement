@@ -206,7 +206,65 @@ class comparing_length:
         except Exception:
             print("feet can not be equal to inch ")
             return False
-                   
+
+    def one_inch_is_not_equal_to_feet(inch,feet):
+        '''
+        Description:
+            this function is use to check inch is equal to one feet then raise the exception if not then pass
+        Parameter:
+            inch and feet is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(inch==feet):
+                raise Exception
+            else:
+                print("inch is not equal to feet")
+                return True
+                
+        except Exception:
+            print("inch can't be equal feet ")
+            return False
+
+    def one_feet_equal_to_twelve_inch(feet,inch):
+        '''
+        Description:
+            this function is use to check one feet is equal to 12 inch or not
+        Parameter:
+            inch and feet is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(feet==12*inch):
+                print("right")
+                return True      
+            else:
+                raise Exception       
+        except Exception:
+            print("1 feet is equal to 12 inch  ")
+            return False
+
+    def twelve_inch_equal_to_one_feet(feet,inch):
+        '''
+        Description:
+            this function is use to check 12 inch is equal to one feet or not
+        Parameter:
+            inch and feet is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(12*inch==feet):
+                print("right")
+                return True   
+            else:
+                raise Exception
+        except Exception:
+            print("12 inches is equal to 1 feet ")
+            return False       
+                      
 if __name__ == '__main__':
     feet = int(input("enter the feet value"))
     object1 = feet_Analyser()
@@ -222,3 +280,6 @@ if __name__ == '__main__':
     inch_Analyser.Type(inch)
     inch_Analyser.zero_feet_equal_to_zero_inch(feet,inch)
     comparing_length.one_feet_not_equal_to_one_inch(feet,inch)
+    comparing_length.one_inch_is_not_equal_to_feet(inch,feet)
+    comparing_length.one_feet_equal_to_twelve_inch(feet,inch)
+    comparing_length.twelve_inch_equal_to_one_feet(feet,inch)
