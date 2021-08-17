@@ -179,6 +179,33 @@ class inch_Analyser(feet_Analyser):
         except Exception:
             print("please enter a nonzero value")
             return False
+
+class comparing_length:
+    '''
+    Description:
+        comparing length is class which is use to check 4 feet and inch type tests 
+    Methods: 
+        one feet not equal to one inch 
+    '''
+    def one_feet_not_equal_to_one_inch(feet,inch):
+        '''
+        Description:
+            this function is use to check one feet is not equal to one inch
+        Parameter:
+            inch and feet is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(feet==inch):
+                raise Exception
+            else:
+                print("feet is not equal to inch")
+                return True
+                
+        except Exception:
+            print("feet can't be equal inch ")
+            return False
                    
 if __name__ == '__main__':
     feet = int(input("enter the feet value"))
@@ -194,3 +221,4 @@ if __name__ == '__main__':
     inch_Analyser.reference(object2)
     inch_Analyser.Type(inch)
     inch_Analyser.zero_feet_equal_to_zero_inch(feet,inch)
+    comparing_length.one_feet_not_equal_to_one_inch(feet,inch)
