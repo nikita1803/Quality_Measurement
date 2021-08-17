@@ -161,7 +161,25 @@ class inch_Analyser(feet_Analyser):
         except Exception:
             print("refrence is not matched")
             return False
-        
+            
+    def zero_feet_equal_to_zero_inch(inch,feet):
+        '''
+        Description:
+            this function is use to check the zero feet equals to zero inch
+        Parameter:
+            inch and feet is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(feet==inch==0):
+                raise Exception
+            else:
+                return True
+        except Exception:
+            print("please enter a nonzero value")
+            return False
+                   
 if __name__ == '__main__':
     feet = int(input("enter the feet value"))
     object1 = feet_Analyser()
@@ -175,3 +193,4 @@ if __name__ == '__main__':
     inch_Analyser.equal(inch)
     inch_Analyser.reference(object2)
     inch_Analyser.Type(inch)
+    inch_Analyser.zero_feet_equal_to_zero_inch(feet,inch)
