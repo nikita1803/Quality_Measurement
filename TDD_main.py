@@ -39,8 +39,119 @@ class feet_Analyser:
                 raise Exception
         except Exception:
             print("Data not matched")
-                  
+
+    
+    def equal(value):
+        '''
+        Description:
+            equal function is use to check the value is equal or non equal to zero
+        Parameter:
+            calue as a parameter
+        Return:
+            boolean value
+        '''
+        try:
+            if(value!=0):
+                return True
+            else:
+                raise exception
+        except Exception:
+            print("Value is none")
+            return False
+
+    def reference(obj1):
+        '''
+        Description:
+            refrence is a parameter which is use to check the refrence of the object
+        Parameter:
+            object is passes as an argument to which we have to check the refrence
+        Return:
+            boolean value
+        '''
+        try:
+            if(isinstance(obj1,feet_Analyser)):
+                return True
+            else:
+                raise Exception
+        except Exception:
+            print("refrence is not matched")
+            return False
+
+    def Type(value):
+        '''
+        Description:
+            type is a function which is use to check the value type 
+        Parameter:
+            value as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if (type(value) == int):
+                print("Is a number")
+                return True
+            else:
+                raise Exception
+        except Exception:
+            print("another type of data")
+            return False
+
+class inch_Analyser(feet_Analyser):
+    '''
+    Description:
+        test inch is class which is use to check all the inch related logic(null, refrence, type , equals)
+    Methods: 
+        zerofeet
+        refrence  
+    '''
+    def zeroinch(value):
+        '''
+        Description:
+            zero inch is a function which is use check the value is zeo or non zero
+        Parameter:
+            value as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(value==0):
+                raise Exception
+            else:
+                feet = value / 12
+                print(feet)
+                return True
+        except Exception:
+            print("please enter a non zero value")
+            return False
+
+    def reference(obj2):
+        '''
+        Description:
+            refrence function is use to check the refrence of the object  
+        Parameter:
+            object is passes as an argument
+        Return:
+            boolean value
+        '''
+        try:
+            if(isinstance(obj2,inch_Analyser)):
+                return True
+            else:
+                raise Exception
+        except Exception:
+            print("refrence is not matched")
+            return False
+        
 if __name__ == '__main__':
     feet = int(input("enter the feet value"))
     object1 = feet_Analyser()
     feet_Analyser.calculate_inch(feet)
+    feet_Analyser.equal(feet)
+    feet_Analyser.reference(object1)
+    feet_Analyser.Type(feet)
+    inch = int(input("Enter the inch value"))
+    object2 = inch_Analyser()
+    inch_Analyser.zeroinch(inch)
+    inch_Analyser.equal(inch)
+    inch_Analyser.reference(object2)
+    inch_Analyser.Type(inch)
