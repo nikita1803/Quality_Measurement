@@ -73,8 +73,8 @@ class feet_Analyser:
         try:
             if(value!=0):
                 return True
-            else:
-                raise exception
+            elif (value==0):
+                raise Exception
         except Exception:
             print("Value is none")
             return False
