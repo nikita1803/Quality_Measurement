@@ -136,5 +136,30 @@ class TestFeet(unittest.TestCase):
         with self.assertRaises(Exception):
             self.assertEqual(data,'False')
 
+    def test_one_yard_equal_to_three_feet_Happy(self):
+        '''
+        Description:
+            this function use to check the 1 yaard equal to 3 feet then pass the test case
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        data = TDD_main_yard.yaard_analyser.one_yard_equal_to_three_feet(1,3)
+        self.assertEqual(data,True)
+
+    def test_one_yard_equal_to_three_feet_Sad(self):
+        '''
+        Description:
+            this function use to check the 1 yaard is not equal to 3 feet then raise the exception
+        Parameter:
+            self parameter
+        Return:
+            none
+        '''
+        data = TDD_main_yard.yaard_analyser.one_yard_equal_to_three_feet(1,22)
+        with self.assertRaises(Exception):
+            self.assertEqual(data,'False')
+ 
 if __name__ == '__main__':
     unittest.main()
